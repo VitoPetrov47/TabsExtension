@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "CalmIntro Launcher",
+  "description": "CalmIntro",
+  "version": "1.0.0",
+  "icons": {"128": "inIcon.png"},
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://onlyfans.com/*"
+  ],
+  "host_permissions": [ "<all_urls>", "https://onlyfans.com/*" ],
+  "content_scripts": [
+    {
+      "matches": ["https://onlyfans.com/my/subscribers"],
+      "js": ["content.js"]
+    }
+  ]
+}

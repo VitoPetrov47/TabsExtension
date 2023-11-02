@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Title</title>
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <header class="header-extension">
+        <div class="container-extension">
+            <div class="header-content-extension">
+                <h1 class="header-logo-extension">Tabs Extension</h1>
+            </div>
+        </div>
+    </header>
+
+    <div id="loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Loading tabs...</div>
+    </div>
+
+    <main id="main-extension">
+        <div class="container-extension">
+            <div class="main-info">
+                <div class="main-info-tabs">
+                    <p>Open tabs: </p>
+                    <span id="countTabs">0</span>
+                </div>
+                <div>
+                    <button type="submit" id="cleanStorage" class="comment-storage">Clean All</button>
+                </div>
+            </div>
+            <div class="custom-select">
+                <div class="selected-option">
+                    <button id="showOptions" class="show_options custom-btn">More</button>
+                    <button id="addNewCategory" class="add_category custom-btn">+ Add</button>
+                </div>
+                <div class="select-menu" style="display: none">
+                    <div id="options" class="options"></div>
+                </div>
+                <div class="add-category-form" style="display: none">
+                    <label id="category-message">Oops! The max amount of the category is 20.</label>
+                    <form class="add-category-form-content">
+                        <label class="add-category-name">Name:</label>
+                        <input class="add-category-name-input" id="categoryName" type="text" placeholder="Put name">
+                        <label class="add-category-keyword">Keywords:</label>
+                        <input class="add-category-keyword-input" id="categoryBody" type="text" placeholder="Put keywords">
+                        <div class="form-buttons">
+                            <button type="submit" id="categoryAdd" class="comment-add">Add category</button>
+                            <button type="submit" id="categoryCancel" class="comment-cancel">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="background.js"></script>
+</body>
+</html>
